@@ -1,5 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
 import {
+  accountActivitonByOtp,
   changeAuthPass,
   changeProfileImg,
   getLoggedinStudent,
@@ -139,6 +140,19 @@ const authSlice = createSlice({
         state.message = action.payload.message;
       })
       .addCase(updateName.rejected, (state, action) => {
+        state.loading = false;
+        state.error = action.error.message;
+      })
+      //activationByOtp
+      .addCase(accountActivitonByOtp.pending, (state) => {
+        state.loading = true;
+      })
+      .addCase(accountActivitonByOtp.fulfilled, (state, action) => {
+        state.loading = false;
+        state.auths = action.payload.auth;
+        state.message = action.payload.message;
+      })
+      .addCase(accountActivitonByOtp.rejected, (state, action) => {
         state.loading = false;
         state.error = action.error.message;
       });

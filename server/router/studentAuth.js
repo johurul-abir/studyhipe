@@ -25,7 +25,6 @@ router.post("/api/v1/changepass", tokenVerify, changePassword);
 router.post("/api/v1/student/profile-photo", studentMulter, profilePhotoChange);
 router.post("/api/v1/student/update-profile", tokenVerify, updateUserInfo);
 router.post("/api/v1/student/update-name", tokenVerify, nameUpdate);
-
 router.get("/api/v1/student/show-password", tokenVerify, showPassword);
 
 //export default

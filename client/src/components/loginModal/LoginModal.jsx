@@ -5,6 +5,7 @@ import { loingStudent } from "../../features/auth/authApiSlice";
 
 const LoginModal = ({ login_modal, set_login_modal }) => {
   const dispatch = useDispatch();
+
   //login form input data
   const [loginInput, setLoginInput] = useState({
     auth: "",

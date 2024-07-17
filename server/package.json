@@ -6,10 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "server": "nodemon server.js",
-    "client": "npm run dev --prefix client",
-    "start": "concurrently \"npm run server\" \"npm run client\" ",
-    "build": "npm run start"
+    "start": "nodemon server.js"
   },
   "keywords": [],
   "author": "",
@@ -19,7 +16,6 @@
     "bcrypt": "^5.1.1",
     "cloudinary": "^2.0.1",
     "colors": "^1.4.0",
-    "concurrently": "^8.2.2",
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.4.1",

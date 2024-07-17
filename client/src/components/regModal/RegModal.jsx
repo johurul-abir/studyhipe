@@ -5,8 +5,9 @@ import { regStudent } from "../../features/auth/authApiSlice";
 
 const RegModal = ({ reg_modal, set_reg_modal }) => {
   const dispatch = useDispatch();
+
   //get input value state
-  const { input, handleInputChange, resetForm } = useForm({
+  const { input, handleInputChange } = useForm({
     name: "",
     auth: "",
     password: "",
@@ -15,7 +16,6 @@ const RegModal = ({ reg_modal, set_reg_modal }) => {
   //create register
   const handleRegisterSbumit = () => {
     dispatch(regStudent(input));
-    resetForm();
   };
 
   return (

@@ -10,22 +10,23 @@ const SingleNotice = () => {
 
   return (
     <>
-      <div className="single-notice">
+      <div className="single-notice ">
         <div className="bg-primary p-3 mb-1">
           <h1 className="text-light text-center">Notice</h1>
         </div>
-        <div className="container mt-4">
+        <div className="container my-5">
           <div className="row justify-content-center">
             <div className="col-xl-6 col-lg-8 col-md-12">
               <Card>
                 <CardBody>
                   <h3>{singleNotice?.title}</h3>
+
+                  <p>
+                    <strong>Notice Date:</strong>
+                  </p>
+                  <img src={singleNotice?.photo} className="w-100" />
+                  <p>{singleNotice?.text}</p>
                 </CardBody>
-                <p>
-                  <strong>Notice Date:</strong>
-                </p>
-                <img src={singleNotice?.photo} alt="" />
-                <p className="pt-3">{singleNotice?.text}</p>
               </Card>
             </div>
           </div>

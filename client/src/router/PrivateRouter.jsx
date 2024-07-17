@@ -33,7 +33,6 @@ import PersonalSecqurity from "../pages/student profile/personal secqurity/Perso
 //create login student route gard
 const AuthStudentRouteGrad = () => {
   const { auths } = useSelector((state) => state.auth);
-
   if (auths) {
     return <Outlet />;
   } else {

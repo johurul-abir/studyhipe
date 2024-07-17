@@ -108,6 +108,17 @@ export const studentRegister = asyncHandler(async (req, res) => {
   res.status(200).json({ auths: student, message: "Register successfull" });
 });
 
+// /**
+//  * @description  student get activation token
+//  * @method GET
+//  * @route /api/v1/student/getactivation-token
+//  * @access public
+//  */
+// export const getActivitonByOtp = asyncHandler(async (req, res) => {
+//   const activationToken = req.cookies.activationToken;
+//   console.log(activationToken);
+// });
+
 /**
  * @description  student Account Activition
  * @method POST

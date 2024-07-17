@@ -87,10 +87,10 @@
   .otp-item {
     display: flex;
     column-gap: 5px;
+    flex-direction: column;
   }
   input {
-    width: 16%;
-    padding: 2px;
+    padding: 5px;
     border-radius: 5px;
   }
 }

@@ -13,15 +13,17 @@ import HscArts from "../pages/hsc-arts/HscArts";
 import Campus from "../pages/campus/Campus";
 import { Navigate, Outlet } from "react-router-dom";
 import { useSelector } from "react-redux";
+import Notice from "../pages/student profile/notice/Notice";
+import SingleNotice from "../pages/student profile/notice/SingleNotice";
 
 //create login student route gard
 const PublicStudentRouteGrad = () => {
   const { auths } = useSelector((state) => state.auth);
 
-  if (auths) {
-    return <Navigate to="/studentprofile" />;
-  } else {
+  if (!auths) {
     return <Outlet />;
+  } else {
+    return <Navigate to="/studentprofile" />;
   }
 };
 
@@ -60,6 +62,14 @@ const PublicRouter = [
           {
             path: "/blog/:slug",
             element: <SingleBlog />,
+          },
+          {
+            path: "/notice",
+            element: <Notice />,
+          },
+          {
+            path: "notice/:id",
+            element: <SingleNotice />,
           },
           {
             path: "/hsc",

@@ -11,6 +11,7 @@ import { PiStudentDuotone } from "react-icons/pi";
 import Teacher from "../teacher/Teacher";
 import RegModal from "../../components/regModal/RegModal";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   //Register Modal
@@ -76,9 +77,11 @@ const Home = () => {
                   <h3>our teachers</h3>
                   <div className="line"></div>
                   <p>Choose by name, specialty, city and more.</p>
-                  <button>
-                    see our teacher <MdKeyboardArrowRight />{" "}
-                  </button>
+                  <Link to="/teacher">
+                    <button>
+                      see our teacher <MdKeyboardArrowRight />{" "}
+                    </button>
+                  </Link>
                 </div>
               </div>
 
@@ -97,10 +100,12 @@ const Home = () => {
                   <p style={{ color: "white" }}>
                     Choose by name, specialty, city and more.
                   </p>
-                  <button style={{ color: "#94a3b8" }}>
-                    see Notice
-                    <MdKeyboardArrowRight />{" "}
-                  </button>
+                  <Link to="/notice">
+                    <button style={{ color: "#94a3b8" }}>
+                      see Notice
+                      <MdKeyboardArrowRight />{" "}
+                    </button>
+                  </Link>
                 </div>
               </div>
 
@@ -116,7 +121,7 @@ const Home = () => {
                   <h3>Admision Now</h3>
                   <div className="line"></div>
                   <p>Choose by name, specialty, city and more.</p>
-                  <button>
+                  <button onClick={() => set_reg_modal(true)}>
                     admision now <MdKeyboardArrowRight />{" "}
                   </button>
                 </div>

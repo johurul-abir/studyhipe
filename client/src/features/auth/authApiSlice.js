@@ -101,3 +101,16 @@ export const updateName = createAsyncThunk(
     }
   }
 );
+
+//Activation Account by OTP
+export const accountActivitonByOtp = createAsyncThunk(
+  "auth/accountActivitonByOtp",
+  async ({ token, otp }) => {
+    try {
+      const response = await API.post(`/api/v1/activate/${token}`, otp);
+      return response.data;
+    } catch (error) {
+      throw new Error(error.response.data.message);
+    }
+  }
+);
